@@ -3,218 +3,505 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Sherry Jung | Developmental Psychology</title>
+  <meta name="description" content="Nghi Nguyen's academic website, research, publications, and writing.">
+  <title>Nghi Nguyen | Ph.D. in Educational Psychology </title>
 
   <style>
     :root {
-      --navy: #192947;
-      --gold: #d69a25;
-      --cream: #faf8f3;
-      --text: #293957;
+      /* Pantone-inspired metallic sapphire palette */
+      --deep-blue: #00263a;     /* Approx. Pantone 2965 C */
+      --sapphire: #004c97;      /* Approx. Pantone 2945 C */
+      --bright-blue: #00a9e0;   /* Approx. Pantone 2995 C */
+      --silver: #a7b0b7;        /* Screen approximation of metallic silver */
+      --ice-blue: #f2f8fc;
+      --ink: #12263a;
+      --muted: #5c6f80;
       --white: #ffffff;
+      --line: #d8e4ec;
+      --shadow: 0 18px 45px rgba(0, 38, 58, 0.13);
+      --metallic-blue:
+        linear-gradient(
+          125deg,
+          #001722 0%,
+          #00263a 22%,
+          #004c97 48%,
+          #00a9e0 58%,
+          #a9e5ff 62%,
+          #005ca8 68%,
+          #00263a 100%
+        );
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      background: var(--cream);
-      color: var(--text);
+      background: var(--ice-blue);
+      color: var(--ink);
       font-family: Arial, Helvetica, sans-serif;
       font-size: 18px;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
-    nav {
-      background: var(--navy);
-      padding: 20px 8%;
+    a {
+      color: var(--sapphire);
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--bright-blue);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    /* Navigation */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(0, 38, 58, 0.96);
+      border-bottom: 1px solid rgba(169, 229, 255, 0.2);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-inner {
+      min-height: 76px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      gap: 28px;
     }
 
-    nav .name {
-      color: white;
-      font-family: Georgia, serif;
-      font-size: 22px;
-      font-weight: bold;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 25px;
+    .site-name {
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.25rem;
+      font-weight: 700;
       text-decoration: none;
-      font-size: 15px;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px 24px;
+    }
+
+    .nav-links a {
+      color: #dff5ff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-decoration: none;
       text-transform: uppercase;
-      letter-spacing: 1px;
     }
 
-    nav a:hover {
-      color: var(--gold);
+    .nav-links a:hover {
+      color: var(--white);
+      text-shadow: 0 0 12px rgba(169, 229, 255, 0.85);
     }
 
+    /* Hero */
     .hero {
-      background: var(--navy);
-      color: white;
-      padding: 70px 8% 90px;
+      position: relative;
+      overflow: hidden;
+      background: var(--metallic-blue);
+      color: var(--white);
+      padding: 90px 0 100px;
     }
 
-    .hero-container {
-      max-width: 1250px;
-      margin: auto;
+    .hero::before {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 82% 25%, rgba(255, 255, 255, 0.2), transparent 23%),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04), transparent 35%);
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
       display: grid;
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.7fr);
       gap: 70px;
       align-items: center;
     }
 
-    h1 {
-      margin: 0 0 20px;
-      color: white;
-      font-family: Georgia, serif;
-      font-size: 52px;
+    .eyebrow {
+      margin: 0 0 12px;
+      color: #c9efff;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
     }
 
-    .subtitle {
-      color: var(--gold);
-      font-size: 22px;
-      font-weight: bold;
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      color: var(--white);
+      font-size: clamp(2.7rem, 6vw, 4.65rem);
+      line-height: 1.08;
+      text-shadow: 0 4px 22px rgba(0, 17, 34, 0.35);
+    }
+
+    .hero-summary {
+      max-width: 760px;
+      margin: 25px 0 0;
+      color: #f1faff;
+      font-size: 1.13rem;
+      line-height: 1.8;
     }
 
     .tags {
-      margin: 25px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 28px 0;
     }
 
     .tag {
       display: inline-block;
-      color: var(--gold);
-      border: 1px solid var(--gold);
-      border-radius: 25px;
-      padding: 5px 15px;
-      margin: 5px 3px;
-      font-size: 15px;
+      padding: 7px 16px;
+      color: #e8f8ff;
+      background: rgba(255, 255, 255, 0.09);
+      border: 1px solid rgba(199, 238, 255, 0.75);
+      border-radius: 999px;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        0 5px 18px rgba(0, 28, 55, 0.18);
+      font-size: 0.82rem;
+      font-weight: 700;
     }
 
-    .profile-photo {
-      width: 280px;
-      height: 280px;
-      object-fit: cover;
-      border: 6px solid var(--gold);
-      border-radius: 50%;
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
     }
 
     .button {
-      display: inline-block;
-      margin: 15px 10px 0 0;
-      padding: 12px 22px;
-      background: var(--gold);
-      color: white;
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 23px;
+      color: var(--white);
+      background:
+        linear-gradient(
+          135deg,
+          #003d7a,
+          #008fd5 42%,
+          #b9e9ff 52%,
+          #0067b1 63%,
+          #003d7a
+        );
+      border: 1px solid #b9e9ff;
+      border-radius: 6px;
+      box-shadow: 0 7px 20px rgba(0, 35, 67, 0.3);
+      font-size: 0.92rem;
+      font-weight: 800;
       text-decoration: none;
-      font-weight: bold;
-      border-radius: 4px;
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .button:hover {
+      color: var(--white);
+      box-shadow: 0 11px 25px rgba(0, 35, 67, 0.45);
+      transform: translateY(-2px);
     }
 
     .button.secondary {
-      background: transparent;
-      border: 2px solid white;
+      background: rgba(0, 31, 57, 0.42);
+      border-color: rgba(224, 247, 255, 0.85);
     }
 
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 75px 25px;
+    .portrait-wrap {
+      position: relative;
+      width: min(100%, 300px);
+      aspect-ratio: 1;
+      margin: 0 auto;
+      display: grid;
+      place-items: center;
+      border: 6px solid #b9e9ff;
+      border-radius: 50%;
+      background:
+        linear-gradient(145deg, #0b5798, #8edcff 48%, #003d74 72%);
+      box-shadow:
+        0 0 0 3px rgba(0, 76, 151, 0.9),
+        0 0 35px rgba(0, 169, 224, 0.75),
+        0 25px 50px rgba(0, 22, 41, 0.38);
+      overflow: hidden;
     }
 
-    section h2 {
-      color: var(--navy);
-      font-family: Georgia, serif;
-      font-size: 40px;
-      border-bottom: 2px solid #ddd8cf;
-      padding-bottom: 15px;
+    .portrait-fallback {
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 5rem;
+      font-weight: 700;
+      letter-spacing: -0.08em;
+      text-shadow: 0 4px 18px rgba(0, 34, 66, 0.45);
     }
 
-    .label {
-      color: var(--gold);
-      font-size: 14px;
-      font-weight: bold;
-      letter-spacing: 2px;
+    .profile-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Content sections */
+    main {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.56), transparent 440px);
+    }
+
+    .section {
+      padding: 90px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-label {
+      margin: 0 0 7px;
+      color: var(--sapphire);
+      font-size: 0.76rem;
+      font-weight: 900;
+      letter-spacing: 0.17em;
       text-transform: uppercase;
     }
 
-    .writing-card {
-      background: white;
-      border-left: 5px solid var(--gold);
-      padding: 25px;
-      margin: 20px 0;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+    h2 {
+      margin: 0 0 30px;
+      padding-bottom: 17px;
+      color: var(--deep-blue);
+      border-bottom: 2px solid var(--line);
+      font-size: clamp(2.2rem, 5vw, 3.35rem);
+      line-height: 1.15;
     }
 
-    .writing-card h3 {
-      color: var(--navy);
-      margin-top: 0;
-      font-family: Georgia, serif;
+    h3 {
+      margin: 0 0 12px;
+      color: var(--deep-blue);
+      font-size: 1.45rem;
+      line-height: 1.3;
+    }
+
+    .lead {
+      max-width: 900px;
+      font-size: 1.12rem;
+    }
+
+    .research-grid,
+    .writing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      position: relative;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(167, 176, 183, 0.45);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .card::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 5px;
+      background:
+        linear-gradient(90deg, var(--deep-blue), var(--sapphire), #a9e5ff, var(--bright-blue));
+      content: "";
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .publication-list {
+      display: grid;
+      gap: 18px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .publication-list li {
+      padding: 22px 24px;
+      background: rgba(255, 255, 255, 0.88);
+      border-left: 5px solid var(--sapphire);
+      border-radius: 0 9px 9px 0;
+      box-shadow: 0 8px 24px rgba(0, 38, 58, 0.08);
+    }
+
+    .date {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--sapphire);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .read-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .read-link:hover {
+      text-decoration: underline;
+    }
+
+    .contact-box {
+      padding: 38px;
+      color: var(--white);
+      background: var(--metallic-blue);
+      border: 1px solid #a9e5ff;
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-box h2 {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .contact-box a {
+      color: #d9f4ff;
+      font-weight: 700;
     }
 
     footer {
-      background: var(--navy);
-      color: white;
-      padding: 35px;
+      padding: 34px 24px;
+      color: #dff5ff;
+      background: var(--deep-blue);
       text-align: center;
+      font-size: 0.86rem;
     }
 
-    @media (max-width: 800px) {
-      .hero-container {
+    @media (max-width: 850px) {
+      .nav-inner {
+        padding: 16px 0;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 70px 0 80px;
+      }
+
+      .hero-grid {
         grid-template-columns: 1fr;
+        gap: 50px;
         text-align: center;
       }
 
-      h1 {
-        font-size: 39px;
+      .hero-summary {
+        margin-right: auto;
+        margin-left: auto;
       }
 
-      nav {
-        display: block;
-        text-align: center;
+      .tags,
+      .actions {
+        justify-content: center;
       }
 
-      nav .links {
-        margin-top: 15px;
+      .portrait-wrap {
+        grid-row: 1;
+        width: 235px;
       }
 
-      nav a {
-        display: inline-block;
-        margin: 5px 8px;
+      .research-grid,
+      .writing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 540px) {
+      body {
+        font-size: 16px;
+      }
+
+      .container {
+        width: min(100% - 30px, 1120px);
+      }
+
+      .nav-links {
+        gap: 7px 14px;
+      }
+
+      .nav-links a {
+        font-size: 0.7rem;
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .card,
+      .contact-box {
+        padding: 24px;
+      }
+
+      .actions .button {
+        width: 100%;
       }
     }
   </style>
 </head>
 
 <body>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="container nav-inner">
+      <a class="site-name" href="#top">Sherry Jung</a>
 
-  <nav>
-    <div class="name">Sherry Jung</div>
-
-    <div class="links">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#writing">Writing</a>
-      <a href="#contact">Contact</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="hero-container">
-
+  <header class="hero" id="top">
+    <div class="container hero-grid">
       <div>
-        <div class="subtitle">Developmental Psychology Researcher</div>
-
+        <p class="eyebrow">Developmental Psychology Researcher</p>
         <h1>Sherry Jung, Ph.D.</h1>
 
-        <div class="tags">
+        <div class="tags" aria-label="Research interests">
           <span class="tag">Child Development</span>
           <span class="tag">Social Learning</span>
           <span class="tag">Culture</span>
@@ -223,99 +510,166 @@
           <span class="tag">Research-to-Policy</span>
         </div>
 
-        <p>
-          I study how children’s social, cultural, and ecological
-          environments shape whom they trust, what they learn,
-          and how they adapt to change.
+        <p class="hero-summary">
+          I study how children’s social, cultural, and ecological environments
+          shape whom they trust, what they learn, and how they adapt to change.
+          My work connects rigorous developmental research with questions that
+          matter to families, educators, communities, and policymakers.
         </p>
 
-        <a class="button" href="#publications">View Publications</a>
-        <a class="button secondary" href="#writing">Read My Writing</a>
+        <div class="actions">
+          <a class="button" href="#publications">View Publications</a>
+          <a class="button secondary" href="#writing">Read My Writing</a>
+        </div>
       </div>
 
-      <div>
+      <div class="portrait-wrap">
+        <span class="portrait-fallback" aria-hidden="true">SJ</span>
+        <!-- Upload a photograph named profile.jpg to display it here. -->
         <img
           class="profile-photo"
           src="profile.jpg"
-          alt="Professional photograph of Sherry Jung">
+          alt="Professional portrait of Sherry Jung"
+          onerror="this.style.display='none'">
       </div>
-
     </div>
   </header>
 
-  <section id="about">
-    <div class="label">Background</div>
-    <h2>About</h2>
+  <main>
+    <section class="section" id="about">
+      <div class="container">
+        <p class="section-label">Background</p>
+        <h2>About</h2>
 
-    <p>
-      Write your longer professional biography here. Describe your
-      education, current position, research interests, and the larger
-      questions that motivate your work.
-    </p>
-  </section>
+        <p class="lead">
+          I am a developmental psychologist interested in how children learn
+          from other people and navigate changing social environments. My
+          research examines how culture, group membership, relationships, and
+          residential mobility shape children’s learning, trust, and adaptation.
+        </p>
 
-  <section id="research">
-    <div class="label">Areas of Interest</div>
-    <h2>Research</h2>
+        <p>
+          Replace this paragraph with your education, current position, and a
+          more detailed description of the questions motivating your work. You
+          can edit this text directly inside the <strong>index.html</strong>
+          file on GitHub.
+        </p>
+      </div>
+    </section>
 
-    <p>
-      Describe your research on children’s learning, residential
-      mobility, social relationships, culture, and adaptation.
-    </p>
-  </section>
+    <section class="section" id="research">
+      <div class="container">
+        <p class="section-label">Areas of Interest</p>
+        <h2>Research</h2>
 
-  <section id="publications">
-    <div class="label">Selected Work</div>
-    <h2>Publications</h2>
+        <div class="research-grid">
+          <article class="card">
+            <h3>Children’s Social Learning</h3>
+            <p>
+              How do children decide whom to trust and what information to
+              accept? This work examines the social and epistemic cues children
+              use when learning from individuals and groups.
+            </p>
+          </article>
 
-    <p>
-      Jung, S. (2026). Title of article. <em>Journal Name</em>.
-    </p>
+          <article class="card">
+            <h3>Mobility and Adaptation</h3>
+            <p>
+              How do moving, migration, and changing relationships influence
+              children’s social understanding, identity, and ability to adapt
+              to new environments?
+            </p>
+          </article>
 
-    <p>
-      Jung, S., &amp; Coauthor, A. (2025). Title of article.
-      <em>Journal Name</em>.
-    </p>
-  </section>
+          <article class="card">
+            <h3>Culture and Ecology</h3>
+            <p>
+              How do cultural values interact with children’s immediate social,
+              economic, relational, and ecological conditions to shape learning?
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <section id="writing">
-    <div class="label">Ideas and Reflections</div>
-    <h2>Writing</h2>
+    <section class="section" id="publications">
+      <div class="container">
+        <p class="section-label">Selected Work</p>
+        <h2>Publications</h2>
 
-    <article class="writing-card">
-      <h3>What Children’s Mobility Can Teach Us About Adaptation</h3>
-      <p><strong>July 27, 2026</strong></p>
-      <p>
-        Moving can disrupt children’s schooling, friendships, and
-        well-being. This article considers how children understand
-        unavoidable transitions and the strengths they may develop.
-      </p>
-    </article>
+        <ul class="publication-list">
+          <li>
+            <strong>Jung, S.</strong> (2026). Replace this text with the title
+            of your article. <em>Journal Name, volume</em>(issue), pages.
+          </li>
 
-    <article class="writing-card">
-      <h3>Why Children’s Immediate Environments Matter</h3>
-      <p><strong>July 20, 2026</strong></p>
-      <p>
-        A reflection on how socioecological conditions complement
-        traditional cultural explanations of children’s learning.
-      </p>
-    </article>
-  </section>
+          <li>
+            <strong>Jung, S., &amp; Coauthor, A.</strong> (2025). Replace this
+            text with another publication. <em>Journal Name, volume</em>(issue),
+            pages.
+          </li>
 
-  <section id="contact">
-    <div class="label">Get in Touch</div>
-    <h2>Contact</h2>
+          <li>
+            Add working papers, manuscripts under review, policy writing, or
+            links to your Google Scholar profile here.
+          </li>
+        </ul>
+      </div>
+    </section>
 
-    <p>Email: your-email@example.com</p>
-    <p>
-      <a href="https://www.linkedin.com/">LinkedIn</a> |
-      <a href="https://scholar.google.com/">Google Scholar</a>
-    </p>
-  </section>
+    <section class="section" id="writing">
+      <div class="container">
+        <p class="section-label">Ideas and Reflections</p>
+        <h2>Writing</h2>
+
+        <div class="writing-grid">
+          <article class="card">
+            <span class="date">July 27, 2026</span>
+            <h3>What Children’s Mobility Can Teach Us About Adaptation</h3>
+            <p>
+              Moving can disrupt children’s schooling, friendships, and
+              well-being. This article considers how children understand
+              unavoidable transitions and the strengths they may develop.
+            </p>
+            <a class="read-link" href="#">Read article →</a>
+          </article>
+
+          <article class="card">
+            <span class="date">July 20, 2026</span>
+            <h3>Why Children’s Environments Matter</h3>
+            <p>
+              A reflection on how socioecological conditions complement
+              traditional cultural explanations of children’s learning.
+            </p>
+            <a class="read-link" href="#">Read article →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <p class="eyebrow">Get in Touch</p>
+          <h2>Contact</h2>
+
+          <p>
+            Email:
+            <a href="mailto:your-email@example.com">your-email@example.com</a>
+          </p>
+
+          <p>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+            &nbsp;·&nbsp;
+            <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    © 2026 Sherry Jung
+    © 2026 Nghi Nguyen. All rights reserved.
   </footer>
-
 </body>
 </html>
