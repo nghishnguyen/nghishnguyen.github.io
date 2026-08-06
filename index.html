@@ -3,493 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Nghi Nguyen's academic website, research, publications, and writing.">
-  <title>Nghi Nguyen | Ph.D. in Educational Psychology </title>
-
-  <style>
-    :root {
-      /* Pantone-inspired metallic sapphire palette */
-      --deep-blue: #00263a;     /* Approx. Pantone 2965 C */
-      --sapphire: #004c97;      /* Approx. Pantone 2945 C */
-      --bright-blue: #00a9e0;   /* Approx. Pantone 2995 C */
-      --silver: #a7b0b7;        /* Screen approximation of metallic silver */
-      --ice-blue: #f2f8fc;
-      --ink: #12263a;
-      --muted: #5c6f80;
-      --white: #ffffff;
-      --line: #d8e4ec;
-      --shadow: 0 18px 45px rgba(0, 38, 58, 0.13);
-      --metallic-blue:
-        linear-gradient(
-          125deg,
-          #001722 0%,
-          #00263a 22%,
-          #004c97 48%,
-          #00a9e0 58%,
-          #a9e5ff 62%,
-          #005ca8 68%,
-          #00263a 100%
-        );
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: var(--ice-blue);
-      color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 18px;
-      line-height: 1.75;
-    }
-
-    a {
-      color: var(--sapphire);
-    }
-
-    a:focus-visible,
-    button:focus-visible {
-      outline: 3px solid var(--bright-blue);
-      outline-offset: 4px;
-    }
-
-    .container {
-      width: min(1120px, calc(100% - 48px));
-      margin: 0 auto;
-    }
-
-    /* Navigation */
-    .site-nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(0, 38, 58, 0.96);
-      border-bottom: 1px solid rgba(169, 229, 255, 0.2);
-      backdrop-filter: blur(14px);
-    }
-
-    .nav-inner {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
-    }
-
-    .site-name {
-      color: var(--white);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 8px 24px;
-    }
-
-    .nav-links a {
-      color: #dff5ff;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-
-    .nav-links a:hover {
-      color: var(--white);
-      text-shadow: 0 0 12px rgba(169, 229, 255, 0.85);
-    }
-
-    /* Hero */
-    .hero {
-      position: relative;
-      overflow: hidden;
-      background: var(--metallic-blue);
-      color: var(--white);
-      padding: 90px 0 100px;
-    }
-
-    .hero::before {
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 82% 25%, rgba(255, 255, 255, 0.2), transparent 23%),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.04), transparent 35%);
-      content: "";
-      pointer-events: none;
-    }
-
-    .hero-grid {
-      position: relative;
-      display: grid;
-      grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.7fr);
-      gap: 70px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      margin: 0 0 12px;
-      color: #c9efff;
-      font-size: 0.8rem;
-      font-weight: 800;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: Georgia, "Times New Roman", serif;
-    }
-
-    h1 {
-      margin: 0 0 20px;
-      color: var(--white);
-      font-size: clamp(2.7rem, 6vw, 4.65rem);
-      line-height: 1.08;
-      text-shadow: 0 4px 22px rgba(0, 17, 34, 0.35);
-    }
-
-    .hero-summary {
-      max-width: 760px;
-      margin: 25px 0 0;
-      color: #f1faff;
-      font-size: 1.13rem;
-      line-height: 1.8;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 28px 0;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 7px 16px;
-      color: #e8f8ff;
-      background: rgba(255, 255, 255, 0.09);
-      border: 1px solid rgba(199, 238, 255, 0.75);
-      border-radius: 999px;
-      box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.2),
-        0 5px 18px rgba(0, 28, 55, 0.18);
-      font-size: 0.82rem;
-      font-weight: 700;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 32px;
-    }
-
-    .button {
-      display: inline-flex;
-      min-height: 50px;
-      align-items: center;
-      justify-content: center;
-      padding: 11px 23px;
-      color: var(--white);
-      background:
-        linear-gradient(
-          135deg,
-          #003d7a,
-          #008fd5 42%,
-          #b9e9ff 52%,
-          #0067b1 63%,
-          #003d7a
-        );
-      border: 1px solid #b9e9ff;
-      border-radius: 6px;
-      box-shadow: 0 7px 20px rgba(0, 35, 67, 0.3);
-      font-size: 0.92rem;
-      font-weight: 800;
-      text-decoration: none;
-      transition: transform 160ms ease, box-shadow 160ms ease;
-    }
-
-    .button:hover {
-      color: var(--white);
-      box-shadow: 0 11px 25px rgba(0, 35, 67, 0.45);
-      transform: translateY(-2px);
-    }
-
-    .button.secondary {
-      background: rgba(0, 31, 57, 0.42);
-      border-color: rgba(224, 247, 255, 0.85);
-    }
-
-    .portrait-wrap {
-      position: relative;
-      width: min(100%, 300px);
-      aspect-ratio: 1;
-      margin: 0 auto;
-      display: grid;
-      place-items: center;
-      border: 6px solid #b9e9ff;
-      border-radius: 50%;
-      background:
-        linear-gradient(145deg, #0b5798, #8edcff 48%, #003d74 72%);
-      box-shadow:
-        0 0 0 3px rgba(0, 76, 151, 0.9),
-        0 0 35px rgba(0, 169, 224, 0.75),
-        0 25px 50px rgba(0, 22, 41, 0.38);
-      overflow: hidden;
-    }
-
-    .portrait-fallback {
-      color: var(--white);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 5rem;
-      font-weight: 700;
-      letter-spacing: -0.08em;
-      text-shadow: 0 4px 18px rgba(0, 34, 66, 0.45);
-    }
-
-    .profile-photo {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Content sections */
-    main {
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.56), transparent 440px);
-    }
-
-    .section {
-      padding: 90px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .section-label {
-      margin: 0 0 7px;
-      color: var(--sapphire);
-      font-size: 0.76rem;
-      font-weight: 900;
-      letter-spacing: 0.17em;
-      text-transform: uppercase;
-    }
-
-    h2 {
-      margin: 0 0 30px;
-      padding-bottom: 17px;
-      color: var(--deep-blue);
-      border-bottom: 2px solid var(--line);
-      font-size: clamp(2.2rem, 5vw, 3.35rem);
-      line-height: 1.15;
-    }
-
-    h3 {
-      margin: 0 0 12px;
-      color: var(--deep-blue);
-      font-size: 1.45rem;
-      line-height: 1.3;
-    }
-
-    .lead {
-      max-width: 900px;
-      font-size: 1.12rem;
-    }
-
-    .research-grid,
-    .writing-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      position: relative;
-      padding: 30px;
-      background: rgba(255, 255, 255, 0.92);
-      border: 1px solid rgba(167, 176, 183, 0.45);
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .card::before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      height: 5px;
-      background:
-        linear-gradient(90deg, var(--deep-blue), var(--sapphire), #a9e5ff, var(--bright-blue));
-      content: "";
-    }
-
-    .card p:last-child {
-      margin-bottom: 0;
-    }
-
-    .publication-list {
-      display: grid;
-      gap: 18px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .publication-list li {
-      padding: 22px 24px;
-      background: rgba(255, 255, 255, 0.88);
-      border-left: 5px solid var(--sapphire);
-      border-radius: 0 9px 9px 0;
-      box-shadow: 0 8px 24px rgba(0, 38, 58, 0.08);
-    }
-
-    .date {
-      display: inline-block;
-      margin-bottom: 10px;
-      color: var(--sapphire);
-      font-size: 0.78rem;
-      font-weight: 900;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-    }
-
-    .read-link {
-      display: inline-block;
-      margin-top: 8px;
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .read-link:hover {
-      text-decoration: underline;
-    }
-
-    .contact-box {
-      padding: 38px;
-      color: var(--white);
-      background: var(--metallic-blue);
-      border: 1px solid #a9e5ff;
-      border-radius: 14px;
-      box-shadow: var(--shadow);
-    }
-
-    .contact-box h2 {
-      color: var(--white);
-      border-color: rgba(255, 255, 255, 0.25);
-    }
-
-    .contact-box a {
-      color: #d9f4ff;
-      font-weight: 700;
-    }
-
-    footer {
-      padding: 34px 24px;
-      color: #dff5ff;
-      background: var(--deep-blue);
-      text-align: center;
-      font-size: 0.86rem;
-    }
-
-    @media (max-width: 850px) {
-      .nav-inner {
-        padding: 16px 0;
-        flex-direction: column;
-      }
-
-      .nav-links {
-        justify-content: center;
-      }
-
-      .hero {
-        padding: 70px 0 80px;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
-        text-align: center;
-      }
-
-      .hero-summary {
-        margin-right: auto;
-        margin-left: auto;
-      }
-
-      .tags,
-      .actions {
-        justify-content: center;
-      }
-
-      .portrait-wrap {
-        grid-row: 1;
-        width: 235px;
-      }
-
-      .research-grid,
-      .writing-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 540px) {
-      body {
-        font-size: 16px;
-      }
-
-      .container {
-        width: min(100% - 30px, 1120px);
-      }
-
-      .nav-links {
-        gap: 7px 14px;
-      }
-
-      .nav-links a {
-        font-size: 0.7rem;
-      }
-
-      .section {
-        padding: 65px 0;
-      }
-
-      .card,
-      .contact-box {
-        padding: 24px;
-      }
-
-      .actions .button {
-        width: 100%;
-      }
-    }
-  </style>
+  <meta name="description" content="Nghi Sherry Nguyen's behavioral and UX research portfolio.">
+  <title>Nghi “Sherry” Nguyen | Behavioral &amp; UX Research</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <nav class="site-nav" aria-label="Primary navigation">
     <div class="container nav-inner">
-      <a class="site-name" href="#top">Nghi Nguyen, Ph.D</a>
+      <a class="site-name" href="#top">Nghi “Sherry” Nguyen</a>
 
       <div class="nav-links">
+        <a href="#work">Work</a>
         <a href="#about">About</a>
-        <a href="#research">Research</a>
+        <a href="#methods">Methods</a>
         <a href="#publications">Publications</a>
-        <a href="#writing">Writing</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -498,183 +26,214 @@
   <header class="hero" id="top">
     <div class="container hero-grid">
       <div>
-        <p class="eyebrow">Developmental Psychology Researcher</p>
-        <h1>Nghi Nguyen, Ph.D.</h1>
-
-        <div class="tags" aria-label="Research interests">
-          <span class="tag">Child Development</span>
-          <span class="tag">Social Learning</span>
-          <span class="tag">Culture</span>
-          <span class="tag">Residential Mobility</span>
-          <span class="tag">Intergroup Relations</span>
-          <span class="tag">Research-to-Policy</span>
-        </div>
+        <p class="eyebrow">Behavioral scientist · UX researcher</p>
+        <h1>Researching how people <em>trust, engage,</em> and decide.</h1>
 
         <p class="hero-summary">
-          I study how children’s social, cultural, and ecological environments
-          shape whom they trust, what they learn, and how they adapt to change.
-          My work connects rigorous developmental research with questions that
-          matter to families, educators, communities, and policymakers.
+          I am a Ph.D.-trained behavioral researcher who leads experiments,
+          surveys, evidence reviews, and human-subjects studies from initial
+          question through analysis and reporting. I translate behavioral
+          evidence into clearer, more trustworthy, and more context-sensitive
+          experiences.
         </p>
 
+        <ul class="tag-list" aria-label="Research methods">
+          <li class="tag">Experimental research</li>
+          <li class="tag">Survey research</li>
+          <li class="tag">Behavioral observation</li>
+          <li class="tag">Evidence synthesis</li>
+          <li class="tag">Quantitative analysis</li>
+        </ul>
+
         <div class="actions">
-          <a class="button" href="#publications">View Publications</a>
-          <a class="button secondary" href="#writing">Read My Writing</a>
+          <a class="button" href="#work">View selected work</a>
+          <a class="button secondary" href="#contact">Contact me</a>
         </div>
       </div>
 
-      <div class="portrait-wrap">
-        <span class="portrait-fallback" aria-hidden="true">SJ</span>
-        <!-- Upload a photograph named profile.jpg to display it here. -->
+      <div class="hero-mark">
+        <span aria-hidden="true">SN</span>
+        <!-- Optional: upload profile.jpg to the same folder to show your photo. -->
         <img
           class="profile-photo"
           src="profile.jpg"
-          alt="Professional portrait of Nghi Nguyen"
+          alt="Professional portrait of Nghi Sherry Nguyen"
           onerror="this.style.display='none'">
       </div>
     </div>
   </header>
 
   <main>
-    <section class="section" id="about">
+    <section class="section blue-band" id="work">
       <div class="container">
-        <p class="section-label">Background</p>
-        <h2>About</h2>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Selected work</p>
+            <h2>Research case studies</h2>
+          </div>
+          <p>
+            Academic rigor, told as practical research stories: the question,
+            my decisions, the evidence, and what a product, program, or
+            intervention team could test next.
+          </p>
+        </div>
 
-        <p class="lead">
-          I am a developmental psychologist interested in how children learn
-          from other people and navigate changing social environments. My
-          research examines how culture, group membership, relationships, and
-          residential mobility shape children’s learning, trust, and adaptation.
-        </p>
+        <div class="work-grid">
+          <article class="project-card">
+            <span class="project-number">Case 01 · Experimental research</span>
+            <h3>How Communication Format Shapes Engagement and Trust</h3>
+            <p>
+              A controlled study tested whether receiving the same message
+              through live video or voice-only communication changed belief
+              revision, spontaneous protest, and behavioral reliance.
+            </p>
+            <p class="meta">Experiment · Behavioral measures · GLMMs · Time-to-event analysis</p>
+            <a class="text-link" href="mediarichness.html">Read the full case study →</a>
+          </article>
 
-        <p>
-          Replace this paragraph with your education, current position, and a
-          more detailed description of the questions motivating your work. You
-          can edit this text directly inside the <strong>index.html</strong>
-          file on GitHub.
-        </p>
+          <article class="project-card">
+            <span class="project-number">Case 02 · Strategic research</span>
+            <h3>How Life Context Shapes Decisions About Whom to Trust</h3>
+            <p>
+              An ongoing research program examines how mobility, familiarity,
+              relationship continuity, group membership, and prior accuracy
+              shape source evaluation.
+            </p>
+            <p class="meta">Experimental design · Survey research · Context-sensitive segmentation</p>
+            <span class="text-link unavailable">Case study coming next</span>
+          </article>
+
+          <article class="project-card">
+            <span class="project-number">Case 03 · Evidence synthesis</span>
+            <h3>Turning a Fragmented Literature Into a Decision-Ready Evidence Map</h3>
+            <p>
+              A published scoping review organized inconsistent definitions
+              and measures of effort in mathematics into a framework for
+              research, measurement, and intervention.
+            </p>
+            <p class="meta">Literature search · Screening · Evidence extraction · Synthesis</p>
+            <span class="text-link unavailable">Case study coming next</span>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="research">
+    <section class="section" id="about">
+      <div class="container two-column">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>Behavioral evidence with a practical destination.</h2>
+        </div>
+
+        <div>
+          <p>
+            My research examines how communication channels, prior beliefs,
+            social environments, and motivational contexts shape people’s
+            decisions. I am especially interested in questions involving
+            trust, information use, engagement, and adaptation.
+          </p>
+          <p>
+            Across my work, I balance theoretical precision with the needs of
+            real decision-makers. That means identifying the mechanism a study
+            can explain, the experience or intervention it could inform, and
+            the evidence still needed before claiming impact.
+          </p>
+
+          <blockquote class="pull-quote">
+            I translate complex human behavior into research that teams can use.
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section peach-band" id="methods">
       <div class="container">
-        <p class="section-label">Areas of Interest</p>
-        <h2>Research</h2>
+        <p class="eyebrow">Research approach</p>
+        <h2>From question to evidence to action</h2>
+        <p class="section-intro">
+          I lead research across the full lifecycle while selecting methods
+          that fit the decision—not the other way around.
+        </p>
 
-        <div class="research-grid">
-          <article class="card">
-            <h3>Children’s Social Learning</h3>
+        <div class="method-grid">
+          <article class="method-card">
+            <h3>Frame</h3>
             <p>
-              How do children decide whom to trust and what information to
-              accept? This work examines the social and epistemic cues children
-              use when learning from individuals and groups.
-            </p>
-          </article>
-  
-
-          <article class="card">
-            <h3>Mobility and Adaptation</h3>
-            <p>
-              How do moving, migration, and changing relationships influence
-              children’s social understanding, identity, and ability to adapt
-              to new environments?
+              Translate broad behavioral or experience problems into focused,
+              testable research questions and measurable constructs.
             </p>
           </article>
 
-          <article class="card">
-            <h3>Culture and Ecology</h3>
+          <article class="method-card">
+            <h3>Investigate</h3>
             <p>
-              How do cultural values interact with children’s immediate social,
-              economic, relational, and ecological conditions to shape learning?
+              Design experiments, surveys, behavioral tasks, and evidence
+              reviews; coordinate recruitment, protocols, and data quality.
+            </p>
+          </article>
+
+          <article class="method-card">
+            <h3>Apply</h3>
+            <p>
+              Separate verified findings from hypotheses, then identify product,
+              UX, program, intervention, or communication decisions to test.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="publications">
+    <section class="section soft-blue-band" id="publications">
       <div class="container">
-        <p class="section-label">Selected Work</p>
-        <h2>Publications</h2>
+        <p class="eyebrow">Academic foundation</p>
+        <h2>Selected publications and outputs</h2>
+        <p class="section-intro">
+          Peer-reviewed and in-progress scholarship supporting the case studies.
+        </p>
 
         <ul class="publication-list">
           <li>
-            <strong>Jung, S.</strong> (2026). Replace this text with the title
-            of your article. <em>Journal Name, volume</em>(issue), pages.
+            <strong>Effort investment in mathematics: A scoping review</strong>
+            (2025). Published in <em>Frontiers in Education</em>.
+            <a href="https://doi.org/10.3389/feduc.2025.1575780" target="_blank" rel="noopener">View publication →</a>
           </li>
-
           <li>
-            <strong>Jung, S., &amp; Coauthor, A.</strong> (2025). Replace this
-            text with another publication. <em>Journal Name, volume</em>(issue),
-            pages.
+            <strong>Communication format, belief revision, and behavioral reliance.</strong>
+            Manuscript in development based on the media-richness research program.
           </li>
-
           <li>
-            Add working papers, manuscripts under review, policy writing, or
-            links to your Google Scholar profile here.
+            <strong>Residential mobility and the socioecological foundations of testimonial learning.</strong>
+            Ongoing empirical and conceptual research program.
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="section" id="writing">
-      <div class="container">
-        <p class="section-label">Ideas and Reflections</p>
-        <h2>Writing</h2>
-
-        <div class="writing-grid">
-          <article class="card">
-            <span class="date">July 27, 2026</span>
-            <h3>
-  <a href="mediarichness.html">
-    How Communication Format Shapes Engagement and Trust
-  </a>
-</h3>
-            <p>
-              Moving can disrupt children’s schooling, friendships, and
-              well-being. This article considers how children understand
-              unavoidable transitions and the strengths they may develop.
-            </p>
-            <a class="read-link" href="#">Read article →</a>
-          </article>
-
-          <article class="card">
-            <span class="date">July 20, 2026</span>
-            <h3>Why Children’s Environments Matter</h3>
-            <p>
-              A reflection on how socioecological conditions complement
-              traditional cultural explanations of children’s learning.
-            </p>
-            <a class="read-link" href="#">Read article →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="contact">
       <div class="container">
-        <div class="contact-box">
-          <p class="eyebrow">Get in Touch</p>
-          <h2>Contact</h2>
+        <div class="contact-panel">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Let’s talk about research.</h2>
+            <p>
+              I am interested in behavioral and UX research opportunities where
+              rigorous evidence can improve products, programs, and experiences.
+            </p>
+          </div>
 
-          <p>
-            Email:
-            <a href="mailto:your-email@example.com">your-email@example.com</a>
-          </p>
-
-          <p>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-            &nbsp;·&nbsp;
-            <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
-          </p>
+          <div class="contact-links">
+            <!-- Replace these two URLs with your actual profiles. -->
+            <a href="mailto:sherry.uacogdev@gmail.com">sherry.uacogdev@gmail.com</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn →</a>
+            <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar →</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    © 2026 Nghi Nguyen. All rights reserved.
+    © 2026 Nghi “Sherry” Nguyen. All rights reserved.
   </footer>
 </body>
 </html>
