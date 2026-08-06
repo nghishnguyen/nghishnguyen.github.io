@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Communication Format and Trust | Sherry Nguyen</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #222;
+      background: #fafafa;
+      line-height: 1.7;
+    }
+
+    main {
+      max-width: 850px;
+      margin: auto;
+      padding: 40px 24px 80px;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 55px;
+      font-size: 28px;
+    }
+
+    .back-link {
+      color: #555;
+      text-decoration: none;
+    }
+
+    .label {
+      margin-top: 55px;
+      color: #a64b32;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .summary {
+      font-size: 21px;
+      color: #555;
+    }
+
+    .project-details {
+      margin: 35px 0;
+      padding: 24px;
+      background: white;
+      border-left: 5px solid #d9785b;
+    }
+
+    .insight {
+      margin: 35px 0;
+      padding: 25px;
+      background: #f2e7e2;
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+<main>
+
+  <a class="back-link" href="index.html">← Back to portfolio</a>
+
+  <p class="label">CASE STUDY 01 · EXPERIMENTAL RESEARCH</p>
+
+  <h1>How Communication Format Shapes Engagement and Trust</h1>
+
+  <p class="summary">
+    A controlled remote study examining whether receiving the same
+    message through live video or voice-only communication changes
+    engagement, belief revision, and behavioral reliance.
+  </p>
+
+  <div class="project-details">
+    <p><strong>Role:</strong> Principal investigator and lead researcher</p>
+    <p><strong>Timeline:</strong> 2022–2026</p>
+    <p><strong>Participants:</strong> 62 children ages five and seven</p>
+    <p><strong>Methods:</strong> Controlled experiment, behavioral observation,
+    generalized mixed-effects models, and time-to-event analysis</p>
+  </div>
+
+  <h2>The research problem</h2>
+
+  <p>
+    Communication platforms allow the same conversation to happen through
+    video or voice only. Although the words may remain identical, removing
+    video also removes facial expressions, eye gaze, gestures, and other
+    cues that help people interpret a speaker’s attention and intentions.
+  </p>
+
+  <p>
+    I designed a controlled study to investigate one central question:
+    <strong>When message content is held constant, does the communication
+    channel change how children respond to and rely on a speaker?</strong>
+  </p>
+
+  <h2>What I wanted to understand</h2>
+
+  <ul>
+    <li>Would children be more likely to revise a belief after a video interaction?</li>
+    <li>Would communication format affect whether children questioned or protested against the speaker?</li>
+    <li>Would communication format influence how long children relied on the speaker’s promise?</li>
+  </ul>
+
+  <!-- Continue adding the remaining sections here -->
+
+</main>
+</body>
+</html>
