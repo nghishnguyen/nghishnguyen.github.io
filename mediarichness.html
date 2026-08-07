@@ -3,9 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A research case study on how video and voice-only communication shape engagement and trust.">
+  <meta
+    name="description"
+    content="A research case study on how live video and voice-only communication shaped children's belief revision, spontaneous protest, and behavioral reliance."
+  >
   <title>Communication Format and Trust | Nghi “Sherry” Nguyen</title>
   <link rel="stylesheet" href="themestyles.css">
+
+  <style>
+    .citation {
+      font-size: 0.94em;
+      white-space: normal;
+    }
+
+    .reference-list {
+      margin-top: 1.5rem;
+      padding-left: 1.25rem;
+    }
+
+    .reference-list li {
+      margin-bottom: 0.9rem;
+    }
+
+    .scope-note {
+      margin-top: 1.5rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -26,12 +49,16 @@
   <header class="case-hero">
     <div class="container">
       <a class="back-link" href="index.html#work">← Back to selected work</a>
-      <p class="eyebrow">Project 1 · Experimental research</p>
-      <h1>How Communication Format Shapes Informational and Social Decision</h1>
+      <p class="eyebrow">Project 1 · Experimental behavioral research</p>
+
+      <h1>How Communication Format Shapes Informational and Social Decisions</h1>
+
       <p class="case-summary">
-        A remote and moderated experiment examining whether receiving the same message
-        through live video or voice-only communication changes belief revision,
-        active engagement, and wait during Delay-of-gratificaton task.
+        I led a randomized, remote experiment testing whether children responded
+        differently to the same speaker and verbal content when the interaction
+        occurred through live video rather than live voice chat. The study examined
+        belief revision, spontaneous protest, and waiting behavior to understand how
+        communication format can shape both learning from and relying on another person.
       </p>
     </div>
   </header>
@@ -41,39 +68,69 @@
       <dl class="snapshot">
         <div>
           <dt>Role</dt>
-          <dd>Principal investigator and lead researcher</dd>
+          <dd>Lead researcher and study designer</dd>
         </div>
+
         <div>
           <dt>Timeline</dt>
           <dd>2022–2026</dd>
         </div>
+
         <div>
           <dt>Participants</dt>
           <dd>62 children: 31 five-year-olds and 31 seven-year-olds</dd>
         </div>
+
         <div>
           <dt>Methods</dt>
-          <dd>Experiment, behavioral observation, GLMMs, time-to-event analysis</dd>
+          <dd>Randomized experiment, behavioral coding, GLMMs, Firth-penalized Cox regression</dd>
         </div>
       </dl>
     </div>
 
     <section class="case-section">
       <div class="container case-layout">
-        <p class="case-kicker">01 · The problem</p>
+        <p class="case-kicker">01 · The problem and research gap</p>
+
         <div class="case-content">
-          <h2>The same claims may not always create the same experience.</h2>
+          <h2>The same words may not create the same interaction.</h2>
+
           <p>
-            Communication platforms often allow the same conversation to happen
-            through video or voice only. Although the claims may remain identical,
-            turning off a websam or deactivate video also removes eye gaze, facial expression, gesture, and
-            other cues that help people interpret whether a speaker is addressing
-            them and engaging with them in real time. The capacity to encompass a variety of cues has 
-            been a feature of the Media Richness concept (Daft & Lengel, 1986)
+            Communication channels differ in the number and type of cues they make
+            available. Live video can convey a speaker’s face, gaze, gestures, and
+            contingent nonverbal responses, whereas voice chat preserves the spoken
+            message but removes many visual cues. Media Richness Theory describes this
+            variation as a channel’s capacity to carry multiple cues, support rapid
+            feedback, and personalize communication
+            <span class="citation">(Daft &amp; Lengel, 1986; Daft, Lengel, &amp; Trevino, 1987)</span>.
           </p>
+
           <p>
-            Thus, I wanted to test whether the media richness changes how a
-            person (a child in my case) responds to a speaker in two cases: belief-revision (informational decision) and social trust (wait time on the Delay-of-gratification task).
+            Research on children’s selective trust has typically emphasized
+            <em>evidential</em> information: whether a speaker has been accurate,
+            knowledgeable, or able to provide a good explanation. Yet children’s
+            testimonial decisions are also sensitive to the immediate context in which
+            information is delivered. For example, direct address can affect whether
+            children challenge and later endorse counterintuitive testimony even when it
+            does not provide new evidence that the claim is true
+            <span class="citation">(Corriveau &amp; Kurkul, 2014; Lane &amp; Harris, 2014; Li &amp; Koenig, 2020)</span>.
+          </p>
+
+          <p>
+            This created two related gaps. First, relatively little developmental work
+            had treated the communication medium itself as an ecological constraint on
+            which cues children can use to interpret a speaker’s intent and commitment.
+            Second, epistemic trust—relying on someone for information—and social trust—
+            relying on someone to follow through—were often examined in separate studies
+            or reduced to explicit ratings.
+          </p>
+
+          <p>
+            The purpose of my study was therefore not simply to ask whether video was
+            “better.” It was to test whether changing the channel, while holding the
+            speaker and verbal information constant, altered distinct decisions about
+            the same person: whether children challenged her, revised a prior belief,
+            and persisted while relying on her stated intention to return.
           </p>
         </div>
       </div>
@@ -82,21 +139,36 @@
     <section class="case-section soft-blue-band">
       <div class="container case-layout">
         <p class="case-kicker">02 · Research questions</p>
+
         <div class="case-content">
-          <h2> Decisions was further investigated from two aspects: informational (epistemic) and social rather than one score.</h2>
+          <h2>Separating trust into observable decisions</h2>
+
           <ol class="question-list">
             <li>
-              Information-epistemic decision: Would children be more willing to revise an existing belief after
-              receiving a speaker's conflicting testimony through video-chat rather than voice-chat ?
+              <strong>Primary hypothesis—belief revision:</strong>
+              Would children be more likely to revise an initial categorization after
+              hearing the speaker’s conflicting testimony through live video rather
+              than live voice chat?
             </li>
-          
+
             <li>
-              Social decision: Would communication format affect how long children waited after
-              the speaker said she would return with a delayed benefit?
+              <strong>Primary hypothesis—behavioral reliance:</strong>
+              Would media richness and age jointly shape how long children waited after
+              the speaker stated that she would return with a delayed, customizable reward?
+            </li>
+
+            <li>
+              <strong>Exploratory question—spontaneous protest:</strong>
+              Would communication format affect whether children interrupted,
+              objected to, or corrected the speaker’s counterintuitive claims?
             </li>
           </ol>
+
           <p>
-            Together, these outcomes captured how individuals engage in both epistemic and social decisions within the same interaction.
+            The protest analysis was exploratory rather than a third confirmatory
+            hypothesis. Keeping it distinct was important because an objection could
+            indicate rejection, surprise, a request for clarification, or active
+            participation in the exchange—not simply low trust.
           </p>
         </div>
       </div>
@@ -104,26 +176,60 @@
 
     <section class="case-section">
       <div class="container case-layout">
-        <p class="case-kicker">03 · Study design</p>
+        <p class="case-kicker">03 · Controlled study design</p>
+
         <div class="case-content">
-          <h2>Isolating the effect of communication format</h2>
+          <h2>Changing the channel while holding the interaction constant</h2>
+
           <p>
-            Children were randomly assigned to interact with the same researcher
-            through either live video or live voice chat. I held the message
-            content, study sequence, speaker, and behavioral tasks constant so
-            differences could be attributed more confidently to the communication format.
+            Children were randomly assigned to live video chat or live voice chat.
+            Thirty children participated in the video condition and 32 in the voice
+            condition. Within each age group, 15 children were assigned to video and
+            16 to voice.
           </p>
+
           <p>
-            During a learning task, the researcher made claims that contradicted
-            familiar categories. Children could maintain their initial answer or
-            revise it to match the speaker, and I recorded whether they spontaneously
-            protested against the claims.
+            The approximately 25–30 minute Zoom session included an introduction,
+            a testimony phase, a delay-of-gratification phase, and a post-testimony
+            phase. The focal researcher, E1, followed the same sequence and used the
+            same verbal materials in both conditions. The central manipulation was
+            whether E1’s camera was on or off. A second researcher, E2, appeared later
+            with her camera on in both conditions.
           </p>
+
           <p>
-            The interaction then shifted from informational trust to behavioral
-            reliance. The researcher promised to return with a delayed benefit.
-            Children could wait up to eight minutes or end the wait early, producing
-            a time-to-event outcome rather than a simple yes/no response.
+            During the categorization task, children first labeled ambiguous hybrid
+            animals and objects. E1 then provided a counterintuitive label that
+            conflicted with each child’s initial response—for example, calling a
+            rabbit-squirrel hybrid the category the child had not selected. The task
+            adapted established counterintuitive-testimony paradigms
+            <span class="citation">(Jaswal, 2004; Li &amp; Koenig, 2020)</span>.
+            The hybrid stimuli were created with DALL·E for use in the remote task.
+          </p>
+
+          <p>
+            E2 later reminded each child of both answers and asked for a final
+            categorization. This design separated the moment of exposure from the
+            later belief-revision decision and reduced the likelihood that children
+            changed their answer merely because E1 asked them again.
+          </p>
+
+          <p>
+            Between the two testimony phases, E1 offered a choice between an immediate
+            plain certificate and a delayed certificate that the child could customize
+            with colors and stickers. She stated that she would return, and children
+            could wait for up to eight minutes or end the wait early. The researcher
+            did not use the literal phrase “I promise,” so this was an implicit,
+            future-oriented commitment rather than an explicit promise.
+          </p>
+
+          <p>
+            Waiting was treated as a behavioral index of social trust in E1’s return,
+            while recognizing that delay behavior also depends on attention and
+            self-regulation
+            <span class="citation">(Kidd et al., 2013; Pesch &amp; Koenig, 2018; Ma et al., 2018)</span>.
+            Regardless of how long a child waited, all participants were ultimately
+            allowed to customize their certificate before the post-testimony phase.
           </p>
         </div>
       </div>
@@ -132,17 +238,65 @@
     <section class="case-section peach-band">
       <div class="container case-layout">
         <p class="case-kicker">04 · My role</p>
+
         <div class="case-content">
-          <h2>Leading the full research lifecycle</h2>
+          <h2>Leading the research from theory to reporting</h2>
+
           <ul class="role-list">
-            <li>Defined the research questions and experimental comparison.</li>
-            <li>Developed child-friendly, standardized materials for remote use.</li>
-            <li>Coordinated recruitment through community outreach, ResearchMatch, and referrals.</li>
-            <li>Created procedures for consent, assent, withdrawal, and secure data handling.</li>
-            <li>Trained research support and monitored protocol fidelity.</li>
-            <li>Built trial-level datasets and data-quality procedures.</li>
-            <li>Selected analyses suited to repeated binary decisions and censored waiting-time data.</li>
-            <li>Interpreted the findings and developed conference and manuscript outputs.</li>
+            <li>
+              Identified the theoretical gap linking media richness, testimonial
+              learning, and social reliance.
+            </li>
+
+            <li>
+              Defined the research questions, hypotheses, experimental comparison,
+              and behavioral outcomes.
+            </li>
+
+            <li>
+              Adapted established developmental paradigms for a live, remote format.
+            </li>
+
+            <li>
+              Developed child-friendly procedures, AI-generated hybrid stimuli,
+              scripts, memory checks, and standardized moderator instructions.
+            </li>
+
+            <li>
+              Coordinated recruitment through community outreach, ResearchMatch,
+              social-media groups, referrals, and word of mouth.
+            </li>
+
+            <li>
+              Established procedures for parental consent, child assent, withdrawal,
+              video recording, and secure data handling.
+            </li>
+
+            <li>
+              Coordinated the two-researcher protocol and monitored procedural fidelity
+              across remote sessions.
+            </li>
+
+            <li>
+              Applied participant-protection procedures when one child became upset and
+              when one guardian had not understood the recording requirement; both
+              records were immediately destroyed, leaving a final sample of 62.
+            </li>
+
+            <li>
+              Built trial-level datasets, coded behavioral outcomes, and conducted
+              data-quality and control-factor checks.
+            </li>
+
+            <li>
+              Selected and implemented models appropriate for repeated binary decisions,
+              sparse events, and right-censored waiting times.
+            </li>
+
+            <li>
+              Interpreted the findings conservatively and developed the manuscript,
+              conference materials, and applied case-study translation.
+            </li>
           </ul>
         </div>
       </div>
@@ -150,64 +304,140 @@
 
     <section class="case-section">
       <div class="container case-layout">
-        <p class="case-kicker">05 · Analysis</p>
+        <p class="case-kicker">05 · Analysis decisions</p>
+
         <div class="case-content">
-          <h2>Choosing models that matched the decisions</h2>
+          <h2>Matching each model to the structure of the decision</h2>
+
           <p>
-            A single summary score would have hidden when and how children changed
-            their responses. I analyzed trial-level outcomes using generalized
-            mixed-effects models, accounting for repeated responses from the same participant.
+            Belief revision and protest were repeated binary decisions rather than
+            one-time participant scores. I therefore used trial-level generalized
+            linear mixed-effects models with a random intercept for child. This
+            preserved within-child variation and accounted for the fact that responses
+            from the same participant were not independent.
           </p>
+
           <p>
-            Waiting posed a different problem: some children completed the full
-            interval, so their exact stopping time was not observed. I used
-            time-to-event analysis so those full waits were handled appropriately.
-            Because the younger subgroup was modest and some outcomes were sparse,
-            I used Firth-penalized models to reduce small-sample bias.
+            Before testing the main effects, I examined whether counterbalancing
+            sequence, child sex, or the identity of the researcher serving as E1
+            improved model fit. They did not, so the final analyses were collapsed
+            across those procedural factors. I also tested Age Group × Condition
+            interactions and trial type. Neither improved the belief-revision or
+            protest models, so I retained the more interpretable main-effects models.
           </p>
+
+          <p>
+            I then tested whether protesting during the testimony phase predicted
+            later endorsement of the same counterintuitive claim. This analysis was
+            central to distinguishing protest as outright rejection from protest as a
+            possible form of active epistemic engagement.
+          </p>
+
+          <p>
+            Waiting required a different approach. All 31 seven-year-olds completed
+            the full 480-second interval, whereas only 14 of 31 five-year-olds did so.
+            The absence of any stopping events among seven-year-olds created a ceiling
+            effect and prevented a valid age-by-condition moderation analysis.
+          </p>
+
+          <p>
+            I therefore analyzed the five-year-old subgroup using Firth-penalized Cox
+            regression. Ending the wait before 480 seconds was the event; completing
+            the interval was treated as right-censored. Firth penalization reduced bias
+            from the small subgroup and uneven event distribution. The model tested
+            condition while controlling for age in months.
+          </p>
+
+          <div class="theory-panel scope-note">
+            <p>
+              <strong>Analytic boundary:</strong>
+              Because every seven-year-old waited the full interval, the study cannot
+              establish that video and voice were equivalent for older children. It
+              establishes that the eight-minute task did not produce enough variability
+              to estimate a channel effect in that age group.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="case-section soft-blue-band">
       <div class="container">
-        <p class="eyebrow">06 · Key findings</p>
-        <h2>Video changed several forms of engagement.</h2>
+        <p class="eyebrow">06 · Results</p>
+
+        <h2>Communication format affected challenge, belief revision, and waiting.</h2>
+
+        <p class="section-intro">
+          The estimates below compare assignment to live video with assignment to
+          live voice chat. Confidence intervals are included because the sample was
+          modest and the magnitude of each effect is estimated with uncertainty.
+        </p>
 
         <div class="metric-grid">
           <article class="metric-card">
             <span class="metric-number">9.66×</span>
             <span class="metric-label">Higher odds of belief revision</span>
+
             <p>
-              Children in the video condition had substantially higher odds of
-              endorsing the speaker’s counterintuitive claims than children in voice only.
+              Children in the video condition had higher odds of later endorsing E1’s
+              counterintuitive label than children in the voice condition,
+              OR = 9.66, 95% CI [2.81, 33.15], <em>p</em> &lt; .001.
+              Age group and trial type were not significant predictors.
             </p>
           </article>
 
           <article class="metric-card">
             <span class="metric-number">4.22×</span>
             <span class="metric-label">Higher odds of spontaneous protest</span>
+
             <p>
-              Video also increased objections and corrections, suggesting active
-              engagement with the speaker rather than passive compliance.
+              Children were also more likely to object to or correct E1 in the video
+              condition, OR = 4.22, 95% CI [2.36, 7.56],
+              <em>p</em> &lt; .001. This outcome was exploratory.
+            </p>
+          </article>
+
+          <article class="metric-card">
+            <span class="metric-number">3.90×</span>
+            <span class="metric-label">Higher odds of later endorsement after protest</span>
+
+            <p>
+              A protest did not predict rejection. Children who protested a claim had
+              higher odds of later endorsing that claim,
+              OR = 3.90, 95% CI [1.80, 8.43], <em>p</em> &lt; .001.
             </p>
           </article>
 
           <article class="metric-card">
             <span class="metric-number">91%</span>
-            <span class="metric-label">Lower risk of ending the wait early</span>
+            <span class="metric-label">Lower hazard of stopping early among five-year-olds</span>
+
             <p>
-              Among five-year-olds, the estimated hazard of stopping was lower
-              after video. Seven-year-olds showed a ceiling effect across conditions.
+              Among five-year-olds, assignment to video was associated with a lower
+              hazard of ending the wait,
+              HR = 0.09, 95% CI [0.02, 0.29], <em>p</em> &lt; .001,
+              controlling for age in months.
             </p>
           </article>
         </div>
 
         <div class="insight-block">
           <p>
-            A communication channel does more than carry content. It can change
-            how strongly people engage with, interpret, and rely on the person
-            delivering that content.
+            The strongest cross-outcome pattern was not simply “more agreement.”
+            Video increased both immediate challenge and later belief revision, and
+            protest itself positively predicted later endorsement. This pattern is
+            more consistent with heightened involvement in the exchange than with
+            passive compliance alone, although engagement was an interpretation rather
+            than a directly measured psychological state.
+          </p>
+        </div>
+
+        <div class="theory-panel scope-note">
+          <p>
+            <strong>Important ceiling effect:</strong>
+            All 31 seven-year-olds waited the full eight minutes. The waiting result
+            therefore applies to the five-year-old subgroup; the study did not obtain
+            an estimable video-versus-voice effect among seven-year-olds.
           </p>
         </div>
       </div>
@@ -215,21 +445,73 @@
 
     <section class="case-section">
       <div class="container case-layout">
-        <p class="case-kicker">07 · Theoretical implication</p>
+        <p class="case-kicker">07 · Interpretation</p>
+
         <div class="case-content">
-          <h2>Engagement can include both challenge and acceptance.</h2>
+          <h2>What the pattern may mean—and what it does not prove</h2>
+
           <div class="theory-panel">
+            <h3>Video may have changed how the testimony was interpreted.</h3>
+
             <p>
-              Greater protest and greater belief revision may look contradictory
-              if trust is treated as simple agreement. Together, they suggest that
-              visible cues increased active engagement: children were more likely
-              to challenge the claim in the moment and still more willing to use
-              the speaker’s information later.
+              One evidential possibility is that video reduced ambiguity by providing
+              multiple coordinated cues. A second, interpersonal possibility is that
+              visible gaze, pointing, and contingent attention made the claims feel
+              more clearly directed to the child and pedagogically intentional.
+              Ostensive and direct-address cues can signal that information is being
+              offered specifically for a learner
+              <span class="citation">(Csibra &amp; Gergely, 2009; Li &amp; Koenig, 2020)</span>.
             </p>
+
             <p>
-              Theoretically, the study supports a multidimensional account of
-              trust. Protest, belief revision, and persistence reflect distinct
-              responses to the same source and should not be collapsed into one measure.
+              The study cannot choose definitively between these accounts. The video
+              manipulation bundled several features—face visibility, gaze, gestures,
+              facial expression, and perceived social presence. These cues also did
+              not provide direct evidence that E1’s unusual labels were objectively
+              correct. The finding therefore supports a channel effect, not a single
+              identified mechanism.
+            </p>
+          </div>
+
+          <div class="theory-panel">
+            <h3>Protest and acceptance were not opposites.</h3>
+
+            <p>
+              If protest had functioned only as rejection, it should have predicted
+              less later endorsement. Instead, protest positively predicted belief
+              revision. A plausible interpretation is that some protests registered
+              conflict, requested clarification, or held the speaker accountable while
+              keeping the child involved in the exchange.
+            </p>
+
+            <p>
+              This does not mean that every objection is positive engagement. The
+              study coded whether protest occurred, not the child’s exact motive.
+              The result shows why researchers and product teams should avoid treating
+              all disagreement as disengagement or all agreement as trust.
+            </p>
+          </div>
+
+          <div class="theory-panel">
+            <h3>Waiting reflected reliance, but not social trust alone.</h3>
+
+            <p>
+              Video may have made E1’s future-oriented commitment easier for younger
+              children to recognize as jointly understood. Visible attention can help
+              establish mutual recognition, and younger children’s promise reasoning
+              is still developing and can be context-sensitive
+              <span class="citation">(Kanngiesser et al., 2017; Bonalumi et al., 2021)</span>.
+            </p>
+
+            <p>
+              Another possibility is that access to E1’s face influenced generalized
+              trust impressions
+              <span class="citation">(Ma et al., 2018)</span>.
+              The design did not manipulate facial trustworthiness separately.
+              Moreover, delay behavior also reflects self-regulation and the ability
+              to remain occupied. The waiting result should therefore be described as
+              behavioral reliance with a social-trust interpretation, not as a pure
+              measure of trust.
             </p>
           </div>
         </div>
@@ -239,57 +521,113 @@
     <section class="case-section application-section">
       <div class="container">
         <p class="eyebrow">08 · Applied translation</p>
-        <h2>What this evidence could help teams decide</h2>
+
+        <h2>Decisions this evidence can inform—but not settle</h2>
+
         <p class="section-intro">
-          This was an academic study, not a commercial product evaluation. These
-          are research-informed applications to test—not claims of achieved product impact.
+          This was a developmental experiment, not a commercial product evaluation.
+          The study provides mechanisms and measurement ideas that teams can test in
+          product settings; it does not show that video universally improves adult
+          user experience, trust, conversion, learning, or retention.
         </p>
 
         <div class="implication-grid">
           <article class="implication-card">
-            <h3>Product &amp; UX design</h3>
+            <h3>Channel-selection decision</h3>
+
             <p>
-              Test when visible social cues improve onboarding, remote support,
-              tutoring, or other moments when users must interpret unfamiliar
-              information or rely on a representative. Do not assume an identical
-              script creates an equivalent experience across channels.
+              <strong>Question:</strong>
+              When does a live interaction need visible social cues rather than audio
+              alone?
+            </p>
+
+            <p>
+              Test video and voice formats during ambiguous or socially dependent
+              moments such as onboarding, tutoring, remote support, coaching, or
+              explanations that ask users to revise an existing belief. Keep the
+              script, speaker, timing, and task constant so the channel effect can be
+              interpreted cleanly.
             </p>
           </article>
 
           <article class="implication-card">
-            <h3>Intervention delivery</h3>
+            <h3>Measurement decision</h3>
+
             <p>
-              Compare video and audio formats when an educational or behavior-change
-              intervention depends on belief revision, engagement, or persistence.
-              Preserve an effective audio-accessible path rather than requiring video.
+              <strong>Question:</strong>
+              What should count as engagement or trust?
+            </p>
+
+            <p>
+              Measure questions, corrections, belief updating, continuation,
+              abandonment, and later reliance separately. A single trust or
+              satisfaction rating can hide the difference between active disagreement,
+              disengagement, compliance, and eventual use of information.
             </p>
           </article>
 
           <article class="implication-card">
-            <h3>Engagement &amp; communication</h3>
+            <h3>Commitment-design decision</h3>
+
             <p>
-              Evaluate whether a visible spokesperson changes attention, questions,
-              message acceptance, or follow-through. More objections should not
-              automatically be treated as failure; they may indicate active engagement.
+              <strong>Question:</strong>
+              How can a system make a future action feel clearly acknowledged?
+            </p>
+
+            <p>
+              When users are asked to wait or rely on a representative’s return,
+              compare visible acknowledgment with explicit verbal confirmation,
+              progress indicators, read receipts, status updates, or clear return-time
+              expectations. The present study suggests that mutual recognition may
+              matter, but it did not identify which cue is necessary.
             </p>
           </article>
 
           <article class="implication-card">
-            <h3>Measurement strategy</h3>
+            <h3>Remote-research decision</h3>
+
             <p>
-              Measure questions or protest, belief revision, continuation, and
-              behavioral reliance separately. One satisfaction or trust rating can
-              conceal differences between disagreement, disengagement, and eventual use.
+              <strong>Question:</strong>
+              Is communication format part of the stimulus or an uncontrolled confound?
+            </p>
+
+            <p>
+              In moderated research, switching between camera-on and camera-off
+              sessions may change more than researcher visibility. It may alter direct
+              address, questioning, persistence, and how participants interpret the
+              moderator’s intent. Modality should be standardized, recorded, or
+              deliberately manipulated.
+            </p>
+          </article>
+
+          <article class="implication-card">
+            <h3>Accessibility decision</h3>
+
+            <p>
+              <strong>Question:</strong>
+              Can the experience work when video is unavailable or undesirable?
+            </p>
+
+            <p>
+              Do not make camera use the only path to a successful interaction. Test
+              whether explicit verbal referents, turn-taking cues, confirmations,
+              transcripts, captions, and status signals can preserve critical
+              information for users with low bandwidth, camera discomfort, privacy
+              concerns, or sensory access needs.
             </p>
           </article>
         </div>
 
         <div class="impact-measures">
-          <h3>Potential impact measures</h3>
+          <h3>How I would evaluate the translation in a product study</h3>
+
           <p>
-            Comprehension · belief-updating accuracy · number and type of questions ·
-            task completion · follow-through · abandonment or waiting time · perceived
-            social presence · differences across access needs
+            Randomly assign modality while holding content constant, then measure:
+            comprehension and belief-updating accuracy · number and type of questions ·
+            corrections and objections · task completion · follow-through ·
+            abandonment or time-to-exit · perceived direct address · social presence ·
+            confidence in the representative’s return · accessibility outcomes ·
+            differences by prior familiarity with the channel
           </p>
         </div>
       </div>
@@ -297,31 +635,203 @@
 
     <section class="case-section">
       <div class="container">
-        <p class="eyebrow">09 · Limits and next test</p>
-        <h2>What the study establishes—and what it does not</h2>
+        <p class="eyebrow">09 · Evidence boundaries and next study</p>
+
+        <h2>What the study establishes—and what remains unresolved</h2>
+
+        <div class="theory-panel">
+          <p>
+            <strong>The experiment supports a causal effect of assigned channel within
+            this sample and procedure:</strong>
+            changing whether E1 was visible changed trial-level endorsement and protest,
+            and it changed five-year-olds’ risk of stopping the wait early.
+          </p>
+
+          <p>
+            <strong>It does not establish:</strong>
+            that video is always superior; that children globally trusted E1 more;
+            that one particular visual cue caused the effects; that the same estimates
+            apply to adults or commercial products; or that seven-year-olds were
+            unaffected by modality.
+          </p>
+        </div>
 
         <div class="next-study">
           <div>
             <h3>Limitations</h3>
+
             <p>
-              The sample was relatively small and largely drawn from White,
-              middle-class families with suitable devices and internet access.
-              Home testing introduced distractions that could not be fully standardized.
-              The design established an effect of channel richness but did not isolate
-              which visual cue produced it. Seven-year-olds also showed a waiting ceiling effect.
+              The final sample was modest and was largely recruited from White,
+              middle-class communities. Participant-level ethnicity and socioeconomic
+              status were not collected. Because participation required a suitable
+              device and internet connection, the sample likely underrepresented
+              families with constrained digital access.
+            </p>
+
+            <p>
+              Home testing introduced distractions and natural differences in how
+              children occupied themselves while waiting. These behaviors may have
+              changed the self-regulation demands of the task.
+            </p>
+
+            <p>
+              Camera-on versus camera-off bundled multiple visual and interpersonal
+              cues, so the design could not isolate eye gaze, gesture, facial
+              expression, facial trustworthiness, or perceived social presence.
+            </p>
+
+            <p>
+              The delay task involved an implicit commitment and an eight-minute
+              maximum. It cannot separate trust from self-regulation, and the interval
+              produced a complete ceiling among seven-year-olds.
             </p>
           </div>
 
           <div>
             <h3>Next study</h3>
+
             <p>
-              Use a factorial design to vary eye gaze, facial expression, gesture,
-              and perceived social presence independently; recruit a broader age and
-              socioeconomic range; and add post-task questions about how participants
-              interpreted the speaker’s attention and commitment.
+              Use a factorial design that varies specific cues independently—for
+              example, face visibility, referential gesture, mutual gaze, and explicit
+              acknowledgment—while preserving the same verbal content.
+            </p>
+
+            <p>
+              Compare explicit promise language with the implicit future-oriented
+              statement used here. Add brief post-task questions about whether
+              participants believed the speaker was addressing them, understood a
+              commitment to be in place, expected the speaker to return, or interpreted
+              the speaker as knowledgeable.
+            </p>
+
+            <p>
+              Recruit a broader socioeconomic and cultural sample, measure familiarity
+              with video and voice communication, and systematically code home
+              distractions and self-distraction strategies.
+            </p>
+
+            <p>
+              Use a longer or age-adaptive waiting interval to avoid ceiling effects,
+              and replicate the channel comparison in an adult or product-specific
+              setting before making design recommendations.
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="case-section peach-band">
+      <div class="container case-layout">
+        <p class="case-kicker">10 · What this case demonstrates</p>
+
+        <div class="case-content">
+          <h2>Academic rigor translated into applied research judgment</h2>
+
+          <ul class="role-list">
+            <li>
+              Turning a theoretical construct into a controlled, decision-relevant
+              comparison.
+            </li>
+
+            <li>
+              Operationalizing an abstract concept such as trust through multiple,
+              observable behaviors rather than one self-report score.
+            </li>
+
+            <li>
+              Designing and moderating remote research with children and implementing
+              consent, assent, withdrawal, and data-protection procedures.
+            </li>
+
+            <li>
+              Selecting different statistical models for repeated decisions,
+              predictive associations, sparse outcomes, and censored time-to-event data.
+            </li>
+
+            <li>
+              Distinguishing a causal channel effect from an untested psychological
+              mechanism.
+            </li>
+
+            <li>
+              Translating academic findings into product hypotheses without claiming
+              commercial impact the study did not measure.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section" id="references">
+      <div class="container">
+        <p class="eyebrow">Selected references</p>
+
+        <h2>Research grounding for the case study</h2>
+
+        <p class="section-intro">
+          Statistical estimates and study details are drawn from the project
+          manuscript. The list below highlights selected sources cited in this case;
+          the manuscript contains the fuller literature review and bibliography.
+        </p>
+
+        <ol class="reference-list">
+          <li>
+            Nguyen, N. (2026).
+            <em>The influence of media richness on children’s selective trust</em>.
+            Unpublished manuscript.
+          </li>
+
+          <li>
+            Daft, R. L., &amp; Lengel, R. H. (1986).
+            Organizational information requirements, media richness, and structural
+            design. <em>Management Science, 32</em>, 554–571.
+          </li>
+
+          <li>
+            Daft, R. L., Lengel, R. H., &amp; Trevino, L. K. (1987).
+            Message equivocality, media selection, and manager performance:
+            Implications for information systems. <em>MIS Quarterly, 11</em>, 355–366.
+          </li>
+
+          <li>
+            Corriveau, K. H., &amp; Kurkul, K. E. (2014).
+            “Why does rain fall?”: Children prefer to learn from an informant who uses
+            noncircular explanations. <em>Child Development, 85</em>(5), 1827–1835.
+          </li>
+
+          <li>
+            Ma, F., Chen, B., Xu, F., Lee, K., &amp; Heyman, G. D. (2018).
+            Generalized trust predicts young children’s willingness to delay
+            gratification. <em>Journal of Experimental Child Psychology, 169</em>,
+            118–125.
+            <a
+              href="https://doi.org/10.1016/j.jecp.2017.12.015"
+              target="_blank"
+              rel="noopener noreferrer"
+            >https://doi.org/10.1016/j.jecp.2017.12.015</a>
+          </li>
+
+          <li>
+            Rockmann, K. W., &amp; Northcraft, G. B. (2008).
+            To be or not to be trusted: The influence of media richness on defection
+            and deception. <em>Organizational Behavior and Human Decision Processes,
+            107</em>(2), 106–122.
+          </li>
+
+          <li>
+            Walker, H. J., Feild, H. S., Giles, W. F., Armenakis, A. A.,
+            &amp; Bernerth, J. B. (2009).
+            Displaying employee testimonials on recruitment web sites: Effects of
+            communication media, employee race, and job seeker race on organizational
+            attraction and information credibility.
+            <em>Journal of Applied Psychology, 94</em>(5), 1354–1364.
+            <a
+              href="https://doi.org/10.1037/a0014964"
+              target="_blank"
+              rel="noopener noreferrer"
+            >https://doi.org/10.1037/a0014964</a>
+          </li>
+        </ol>
       </div>
     </section>
 
