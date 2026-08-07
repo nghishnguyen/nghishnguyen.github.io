@@ -5,7 +5,7 @@
   --peach: #ffd8be;
   --slate: #577590;
   --delphinium: #6198ae;
-  --bright-blue: #2f536f;
+  --bright-white: #f4f5f0;
 
   /* Accessible supporting tones derived from the core palette */
   --ink: #263944;
@@ -31,7 +31,7 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--bright-blue);
+  background: var(--bright-white);
   font-family: var(--body);
   font-size: 17px;
   line-height: 1.75;
@@ -150,7 +150,7 @@ h4 {
   font-weight: 700;
   line-height: 1;
   text-decoration: none;
-  blue-space: nowrap;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -180,7 +180,7 @@ h4 {
   padding: clamp(76px, 11vw, 138px) 0;
   background:
     linear-gradient(90deg, transparent 0 69%, var(--peach) 69% 100%),
-    var(--bright-blue);
+    var(--bright-white);
 }
 
 .hero::after {
@@ -222,7 +222,7 @@ h4 {
   margin-inline: auto;
   display: grid;
   place-items: center;
-  color: var(--bright-blue);
+  color: var(--bright-white);
   background: var(--slate);
   border: 12px solid rgba(244, 245, 240, 0.78);
   border-radius: 50%;
@@ -281,7 +281,7 @@ h4 {
 .button {
   min-height: 50px;
   padding: 12px 22px;
-  color: var(--bright-blue);
+  color: var(--bright-white);
   background: var(--slate);
   border: 1px solid var(--slate);
   border-radius: 2px;
@@ -291,7 +291,7 @@ h4 {
 }
 
 .button:hover {
-  color: var(--bright-blue);
+  color: var(--bright-white);
   background: var(--slate-dark);
   transform: translateY(-2px);
 }
@@ -321,7 +321,7 @@ h4 {
 }
 
 .section.blue-band {
-  color: var(--bright-blue);
+  color: var(--bright-white);
   background: var(--slate);
 }
 
@@ -329,7 +329,7 @@ h4 {
 .section.blue-band h3,
 .section.blue-band .eyebrow,
 .section.blue-band .section-intro {
-  color: var(--bright-blue);
+  color: var(--bright-white);
 }
 
 .section.peach-band {
@@ -364,7 +364,7 @@ h4 {
   flex-direction: column;
   padding: 30px;
   color: var(--ink);
-  background: var(--bright-blue);
+  background: var(--bright-white);
   border-top: 8px solid var(--peach);
   box-shadow: 0 16px 42px rgba(33, 55, 68, 0.16);
 }
@@ -482,13 +482,13 @@ h4 {
   gap: 48px;
   align-items: end;
   padding: clamp(34px, 6vw, 62px);
-  color: var(--bright-blue);
+  color: var(--bright-white);
   background: var(--slate-dark);
 }
 
 .contact-panel h2,
 .contact-panel .eyebrow {
-  color: var(--bright-blue);
+  color: var(--bright-white);
 }
 
 .contact-panel p {
@@ -509,7 +509,7 @@ h4 {
 
 footer {
   padding: 28px 24px;
-  color: var(--bright-blue);
+  color: var(--bright-white);
   background: #314959;
   font-size: 0.78rem;
   text-align: center;
@@ -525,7 +525,7 @@ footer {
 .back-link {
   display: inline-block;
   margin-bottom: 48px;
-  color: var(--bright-blue);
+  color: var(--bright-white);
   font-size: 0.8rem;
   font-weight: 700;
   text-decoration: none;
@@ -534,7 +534,7 @@ footer {
 .case-hero .eyebrow,
 .case-hero h1,
 .case-summary {
-  color: var(--bright-blue);
+  color: var(--bright-white);
 }
 
 .case-hero h1 {
@@ -559,7 +559,7 @@ footer {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   margin: 0;
   padding: 0;
-  background: var(--bright-blue);
+  background: var(--bright-white);
   box-shadow: var(--shadow);
 }
 
@@ -682,13 +682,13 @@ footer {
 .insight-block {
   margin-top: 35px;
   padding: clamp(28px, 5vw, 48px);
-  color: var(--bright-blue);
+  color: var(--bright-white);
   background: var(--slate-dark);
 }
 
 .insight-block p {
   margin-bottom: 0;
-  color: var(--bright-blue);
+  color: var(--bright-white);
   font-family: var(--display);
   font-size: clamp(1.65rem, 3.5vw, 2.45rem);
   line-height: 1.25;
@@ -723,7 +723,7 @@ footer {
 .impact-measures {
   margin-top: 28px;
   padding: 26px 28px;
-  background: var(--bright-blue);
+  background: var(--bright-white);
   border-left: 7px solid var(--peach);
 }
 
@@ -750,7 +750,7 @@ footer {
 }
 
 .case-end a {
-  color: var(--bright-blue);
+  color: var(--bright-white);
   font-family: var(--display);
   font-size: clamp(1.6rem, 4vw, 2.5rem);
   text-decoration: none;
@@ -759,7 +759,7 @@ footer {
 @media (max-width: 900px) {
   .hero {
     background:
-      linear-gradient(180deg, var(--bright-blue) 0 76%, var(--peach) 76% 100%);
+      linear-gradient(180deg, var(--bright-white) 0 76%, var(--peach) 76% 100%);
   }
 
   .hero-grid,
@@ -883,291 +883,4 @@ footer {
     scroll-behavior: auto !important;
     transition: none !important;
   }
-}
-
-/* =========================================================
-   CONTRAST FIXES FOR DARK-BLUE AND SLATE BACKGROUNDS
-   Color changes only — no layout, spacing, or sizing changes
-   ========================================================= */
-
-:root {
-  --off-white: #f4f5f0;
-  --warm-beige: #f5d2b8;
-}
-
-/* Default text appears on the dark-blue page background. */
-body {
-  color: var(--off-white);
-}
-
-h1,
-h2,
-h3,
-h4 {
-  color: var(--off-white);
-}
-
-a {
-  color: var(--warm-beige);
-}
-
-/* Hero */
-.hero h1,
-.hero-summary {
-  color: var(--off-white);
-}
-
-.hero h1 em,
-.hero .eyebrow {
-  color: var(--warm-beige);
-}
-
-.hero-mark {
-  color: var(--off-white);
-}
-
-.button {
-  color: var(--off-white);
-}
-
-.button:hover {
-  color: var(--off-white);
-}
-
-.button.secondary {
-  color: var(--warm-beige);
-  border-color: var(--warm-beige);
-}
-
-.button.secondary:hover {
-  color: var(--bright-blue);
-  background: var(--warm-beige);
-}
-
-/* Research-work and other dark blue-band sections */
-.section.blue-band {
-  color: var(--off-white);
-}
-
-.section.blue-band h1,
-.section.blue-band h2,
-.section.blue-band h3,
-.section.blue-band h4 {
-  color: var(--off-white);
-}
-
-.section.blue-band .eyebrow,
-.section.blue-band .project-number {
-  color: var(--warm-beige);
-}
-
-.section.blue-band .section-intro,
-.section.blue-band .section-heading > p {
-  color: var(--off-white);
-}
-
-/* Project cards retain the original dark-blue background. */
-.section.blue-band .project-card {
-  color: var(--off-white);
-}
-
-.section.blue-band .project-card h3 {
-  color: var(--off-white);
-}
-
-.section.blue-band .project-card p {
-  color: var(--off-white);
-}
-
-.section.blue-band .project-card .meta {
-  color: var(--warm-beige);
-  border-top-color: rgba(244, 245, 240, 0.3);
-}
-
-.section.blue-band .project-card .text-link {
-  color: var(--peach);
-}
-
-.section.blue-band .project-card .unavailable {
-  color: rgba(244, 245, 240, 0.72);
-}
-
-/* About section sits directly on the dark page background. */
-#about,
-#about h1,
-#about h2,
-#about h3,
-#about h4,
-#about p {
-  color: var(--off-white);
-}
-
-#about .eyebrow,
-#about .pull-quote {
-  color: var(--warm-beige);
-}
-
-/* Light-background sections keep dark text. */
-.peach-band,
-.soft-blue-band,
-.peach-band h1,
-.peach-band h2,
-.peach-band h3,
-.peach-band h4,
-.soft-blue-band h1,
-.soft-blue-band h2,
-.soft-blue-band h3,
-.soft-blue-band h4 {
-  color: var(--ink);
-}
-
-.peach-band .eyebrow,
-.soft-blue-band .eyebrow {
-  color: var(--slate-dark);
-}
-
-.peach-band .section-intro,
-.soft-blue-band .section-intro {
-  color: #425b67;
-}
-
-/* Cards with paper backgrounds require dark text. */
-.method-card,
-.implication-card,
-.metric-card,
-.next-study > div,
-.publication-list li {
-  color: var(--ink);
-}
-
-.method-card h3,
-.implication-card h3,
-.metric-card h3,
-.next-study > div h3,
-.publication-list li strong {
-  color: var(--ink);
-}
-
-.metric-card .metric-label {
-  color: var(--ink);
-}
-
-/* Contact panel */
-.contact-panel,
-.contact-panel h1,
-.contact-panel h2,
-.contact-panel h3,
-.contact-panel h4,
-.contact-panel p {
-  color: var(--off-white);
-}
-
-.contact-panel .eyebrow {
-  color: var(--warm-beige);
-}
-
-.contact-panel a {
-  color: var(--peach);
-}
-
-/* Footer */
-footer {
-  color: var(--off-white);
-}
-
-/* Case-study hero */
-.case-hero .back-link,
-.case-hero h1,
-.case-hero .case-summary {
-  color: var(--off-white);
-}
-
-.case-hero .eyebrow {
-  color: var(--warm-beige);
-}
-
-/* Snapshot panel */
-.snapshot dt {
-  color: var(--warm-beige);
-}
-
-.snapshot dd {
-  color: var(--off-white);
-}
-
-/* Default case-study sections use the dark page background. */
-.case-section {
-  color: var(--off-white);
-}
-
-.case-section h1,
-.case-section h2,
-.case-section h3,
-.case-section h4 {
-  color: var(--off-white);
-}
-
-.case-section .eyebrow,
-.case-section .case-kicker {
-  color: var(--warm-beige);
-}
-
-/* Case-study sections and components with light backgrounds. */
-.case-section.peach-band,
-.case-section.soft-blue-band,
-.case-section.application-section {
-  color: var(--ink);
-}
-
-.case-section.peach-band h1,
-.case-section.peach-band h2,
-.case-section.peach-band h3,
-.case-section.peach-band h4,
-.case-section.soft-blue-band h1,
-.case-section.soft-blue-band h2,
-.case-section.soft-blue-band h3,
-.case-section.soft-blue-band h4,
-.case-section.application-section h1,
-.case-section.application-section h2,
-.case-section.application-section h3,
-.case-section.application-section h4 {
-  color: var(--ink);
-}
-
-.case-section.peach-band .eyebrow,
-.case-section.peach-band .case-kicker,
-.case-section.soft-blue-band .eyebrow,
-.case-section.soft-blue-band .case-kicker,
-.case-section.application-section .eyebrow,
-.case-section.application-section .case-kicker {
-  color: var(--slate-dark);
-}
-
-.research-question,
-.theory-panel {
-  color: var(--ink);
-}
-
-.research-question h1,
-.research-question h2,
-.research-question h3,
-.research-question h4,
-.theory-panel h1,
-.theory-panel h2,
-.theory-panel h3,
-.theory-panel h4 {
-  color: var(--ink);
-}
-
-/* Dark emphasis panels */
-.insight-block,
-.insight-block p,
-.impact-measures,
-.impact-measures h3,
-.impact-measures p {
-  color: var(--off-white);
-}
-
-.case-end a {
-  color: var(--off-white);
 }
