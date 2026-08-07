@@ -5,7 +5,7 @@
   --peach: #ffd8be;
   --slate: #577590;
   --delphinium: #6198ae;
-  --bright-blue: #2f536f;
+  --bright-white: #f4f5f0;
 
   /* Accessible supporting tones derived from the core palette */
   --ink: #263944;
@@ -31,7 +31,7 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--bright-blue);
+  background: var(--bright-white);
   font-family: var(--body);
   font-size: 17px;
   line-height: 1.75;
@@ -180,7 +180,7 @@ h4 {
   padding: clamp(76px, 11vw, 138px) 0;
   background:
     linear-gradient(90deg, transparent 0 69%, var(--peach) 69% 100%),
-    var(--bright-blue);
+    var(--bright-white);
 }
 
 .hero::after {
@@ -222,7 +222,7 @@ h4 {
   margin-inline: auto;
   display: grid;
   place-items: center;
-  color: var(--bright-blue);
+  color: var(--bright-white);
   background: var(--slate);
   border: 12px solid rgba(244, 245, 240, 0.78);
   border-radius: 50%;
@@ -281,7 +281,7 @@ h4 {
 .button {
   min-height: 50px;
   padding: 12px 22px;
-  color: var(--bright-blue);
+  color: var(--bright-white);
   background: var(--slate);
   border: 1px solid var(--slate);
   border-radius: 2px;
@@ -291,7 +291,7 @@ h4 {
 }
 
 .button:hover {
-  color: var(--bright-blue);
+  color: var(--bright-white);
   background: var(--slate-dark);
   transform: translateY(-2px);
 }
@@ -321,7 +321,7 @@ h4 {
 }
 
 .section.blue-band {
-  color: var(--bright-blue);
+  color: var(--bright-white);
   background: var(--slate);
 }
 
@@ -329,7 +329,7 @@ h4 {
 .section.blue-band h3,
 .section.blue-band .eyebrow,
 .section.blue-band .section-intro {
-  color: var(--bright-blue);
+  color: var(--bright-white);
 }
 
 .section.peach-band {
@@ -364,21 +364,9 @@ h4 {
   flex-direction: column;
   padding: 30px;
   color: var(--ink);
-  background: var(--paper);
+  background: var(--bright-blue);
   border-top: 8px solid var(--peach);
   box-shadow: 0 16px 42px rgba(33, 55, 68, 0.16);
-}
-
-.section.blue-band .project-card h3 {
-  color: var(--ink);
-}
-
-.section.blue-band .project-card .project-number {
-  color: var(--slate);
-}
-
-.section.blue-band .project-card p {
-  color: #425b67;
 }
 
 .project-card:nth-child(2) {
@@ -494,13 +482,13 @@ h4 {
   gap: 48px;
   align-items: end;
   padding: clamp(34px, 6vw, 62px);
-  color: var(--bright-blue);
+  color: var(--bright-white);
   background: var(--slate-dark);
 }
 
 .contact-panel h2,
 .contact-panel .eyebrow {
-  color: var(--bright-blue);
+  color: var(--bright-white);
 }
 
 .contact-panel p {
@@ -521,7 +509,7 @@ h4 {
 
 footer {
   padding: 28px 24px;
-  color: var(--bright-blue);
+  color: var(--bright-white);
   background: #314959;
   font-size: 0.78rem;
   text-align: center;
@@ -537,7 +525,7 @@ footer {
 .back-link {
   display: inline-block;
   margin-bottom: 48px;
-  color: var(--bright-blue);
+  color: var(--bright-white);
   font-size: 0.8rem;
   font-weight: 700;
   text-decoration: none;
@@ -546,7 +534,7 @@ footer {
 .case-hero .eyebrow,
 .case-hero h1,
 .case-summary {
-  color: var(--bright-blue);
+  color: var(--bright-white);
 }
 
 .case-hero h1 {
@@ -571,7 +559,7 @@ footer {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   margin: 0;
   padding: 0;
-  background: var(--bright-blue);
+  background: var(--bright-white);
   box-shadow: var(--shadow);
 }
 
@@ -694,13 +682,13 @@ footer {
 .insight-block {
   margin-top: 35px;
   padding: clamp(28px, 5vw, 48px);
-  color: var(--bright-blue);
+  color: var(--bright-white);
   background: var(--slate-dark);
 }
 
 .insight-block p {
   margin-bottom: 0;
-  color: var(--bright-blue);
+  color: var(--bright-white);
   font-family: var(--display);
   font-size: clamp(1.65rem, 3.5vw, 2.45rem);
   line-height: 1.25;
@@ -735,7 +723,7 @@ footer {
 .impact-measures {
   margin-top: 28px;
   padding: 26px 28px;
-  background: var(--bright-blue);
+  background: var(--bright-white);
   border-left: 7px solid var(--peach);
 }
 
@@ -762,7 +750,7 @@ footer {
 }
 
 .case-end a {
-  color: var(--bright-blue);
+  color: var(--bright-white);
   font-family: var(--display);
   font-size: clamp(1.6rem, 4vw, 2.5rem);
   text-decoration: none;
@@ -771,7 +759,7 @@ footer {
 @media (max-width: 900px) {
   .hero {
     background:
-      linear-gradient(180deg, var(--bright-blue) 0 76%, var(--peach) 76% 100%);
+      linear-gradient(180deg, var(--bright-white) 0 76%, var(--peach) 76% 100%);
   }
 
   .hero-grid,
