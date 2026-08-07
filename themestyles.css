@@ -403,8 +403,8 @@ h4 {
 .project-card .meta {
   margin-top: auto;
   padding-top: 18px;
-  border-top: 1px solid var(--line);
-  color: var(--slate-dark);
+  border-top: 1px solid rgba(244, 245, 240, 0.25);
+  color: rgba(244, 245, 240, 0.9);
   font-size: 0.76rem;
   font-weight: 700;
 }
@@ -413,10 +413,11 @@ h4 {
   margin-top: 16px;
   justify-content: flex-start;
   font-size: 0.86rem;
+  color: var(--bright-white);
 }
 
 .project-card .unavailable {
-  color: #6a777d;
+  color: var(--peach);
   cursor: default;
 }
 
