@@ -892,3 +892,29 @@ footer {
     transition: none !important;
   }
 }
+
+/* Discussion / comments area */
+
+.discussion-section {
+  background: var(--blue-soft);
+}
+
+.discussion-section h2 {
+  color: var(--ink);
+}
+
+.discussion-section .eyebrow {
+  color: var(--slate-dark);
+}
+
+.discussion-section .section-intro {
+  color: #425b67;
+  max-width: 760px;
+}
+
+.giscus {
+  margin-top: 32px;
+  padding: 28px;
+  background: var(--paper);
+  border-top: 7px solid var(--peach);
+}
