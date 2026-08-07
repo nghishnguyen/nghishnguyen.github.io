@@ -179,8 +179,7 @@ h4 {
   overflow: hidden;
   padding: clamp(76px, 11vw, 138px) 0;
   background:
-    linear-gradient(90deg, transparent 0 69%, var(--peach) 69% 100%),
-    var(--bright-white);
+    linear-gradient(90deg, var(--delphinium) 0 69%, var(--peach) 69% 100%);
 }
 
 .hero::after {
