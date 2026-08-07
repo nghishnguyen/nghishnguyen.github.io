@@ -219,7 +219,7 @@ h4 {
 .hero-summary {
   max-width: 760px;
   margin-bottom: 0;
-  color: #405762;
+  color: var(--bright-white);
   font-size: clamp(1rem, 2vw, 1.17rem);
 }
 
