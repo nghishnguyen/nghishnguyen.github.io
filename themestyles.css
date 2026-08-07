@@ -949,3 +949,122 @@ footer {
 .giscus-comments iframe {
   width: 100% !important;
 }
+
+
+/* =========================================
+   CONTACT + INQUIRY FORM
+   ========================================= */
+
+.contact-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+  gap: 70px;
+  align-items: start;
+}
+
+.contact-copy h2,
+.contact-copy p {
+  color: var(--off-white);
+}
+
+.contact-copy .eyebrow {
+  color: var(--warm-beige);
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 36px;
+}
+
+.contact-links a {
+  color: var(--peach);
+  font-weight: 700;
+}
+
+
+/* Inquiry box */
+
+.inquiry-box {
+  padding: 30px;
+  background: var(--paper);
+  border-top: 8px solid var(--peach);
+}
+
+.inquiry-box .eyebrow {
+  color: var(--slate-dark);
+}
+
+.inquiry-box h3 {
+  margin-bottom: 24px;
+  color: var(--ink);
+}
+
+
+/* Form */
+
+.inquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.inquiry-form label {
+  color: var(--slate-dark);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.inquiry-form input,
+.inquiry-form select,
+.inquiry-form textarea {
+  width: 100%;
+  padding: 13px 14px;
+
+  color: var(--ink);
+  background: #ffffff;
+
+  border: 1px solid var(--line);
+  border-radius: 2px;
+
+  font-family: var(--body);
+  font-size: 0.86rem;
+}
+
+.inquiry-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.inquiry-form input:focus,
+.inquiry-form select:focus,
+.inquiry-form textarea:focus {
+  border-color: var(--slate);
+  outline: 3px solid rgba(97, 152, 174, 0.18);
+}
+
+.inquiry-submit {
+  width: fit-content;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+  .contact-panel {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+}
