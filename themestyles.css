@@ -364,7 +364,7 @@ h4 {
   flex-direction: column;
   padding: 30px;
   color: var(--ink);
-  background: var(--bright-white);
+  background: var(--bright-blue);
   border-top: 8px solid var(--peach);
   box-shadow: 0 16px 42px rgba(33, 55, 68, 0.16);
 }
