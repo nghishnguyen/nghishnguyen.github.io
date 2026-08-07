@@ -150,7 +150,7 @@ h4 {
   font-weight: 700;
   line-height: 1;
   text-decoration: none;
-  blue-space: nowrap;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -364,9 +364,21 @@ h4 {
   flex-direction: column;
   padding: 30px;
   color: var(--ink);
-  background: var(--bright-blue);
+  background: var(--paper);
   border-top: 8px solid var(--peach);
   box-shadow: 0 16px 42px rgba(33, 55, 68, 0.16);
+}
+
+.section.blue-band .project-card h3 {
+  color: var(--ink);
+}
+
+.section.blue-band .project-card .project-number {
+  color: var(--slate);
+}
+
+.section.blue-band .project-card p {
+  color: #425b67;
 }
 
 .project-card:nth-child(2) {
